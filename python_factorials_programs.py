@@ -4,6 +4,7 @@
 # 2.find a factorial upto given number
 # 3.find a factorial between ranger i.e; (start_range ,end_range)
 # 4.Using built-ins (math module)
+# 5.recursive function
 
 # using for loop
 n=5 # input(input('Enter a number:'))
@@ -98,3 +99,12 @@ x=5
 y=12
 factorial_between_range=[math.factorial(i) for i in range(x,y+1)]
 print(factorial_between_range)
+
+# using recursion faction
+
+def recursive_factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * recursive_factorial(n-1)
+
+print(recursive_factorial(5))
